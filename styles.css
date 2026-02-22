@@ -1,0 +1,115 @@
+/* Color Palette from Daniel Wahome example */
+:root {
+    --primary-navy: #0f172a;   /* Dark section background */
+    --card-bg: #1e293b;        /* Skill card background */
+    --accent-green: #67bc8a;   /* Profile border and buttons */
+    --text-muted: #94a3b8;     /* Light gray for descriptions */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* 1. Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* 2. Profile Section - Circular Frame */
+#about {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;           /* Circular shape */
+    border: 4px solid var(--accent-green); /* Emerald frame */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* 3. Skills Section - 2x2 Cube Grid */
+#skills {
+    background-color: var(--primary-navy);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    /* Arranges cards in a cube: 2 across, 2 down */
+    grid-template-columns: repeat(2, 250px);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+}
+
+.skill-card h3 {
+    color: var(--accent-green);
+    margin: 10px 0;
+}
+
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* 4. Contact Form */
+#contact {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
